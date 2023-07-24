@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './Header'
+//Mi Primer Componente! 
+
+/* 
+
+Componentes : 
+
+1 - Son funciones
+2 - Van en mayuscula
+3 - Todos tienen return
+4 - Siempre deben retornar un solo elemento 
+
+*/
+
+
 
 function App() {
+  
+  let nombre = "Horacio"
+
+  //Vista
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <>
+      {/* Comentarios en JSX */}
+
+      {/* <header id="header" className="header">
+        <h1>Mi Pagina</h1>
+      </header> */}
+
+
+      {/*  Header()  */}
+      <Header />
+
+      <main>
+        <h2>Home</h2>
+        <p>Bienvenido {nombre}</p>
+      </main>
+
+      <footer>
+        <p>Copyright &copy;</p>
+      </footer>
+
+    </>
+   
   );
 }
 

@@ -1,0 +1,20 @@
+Archivo inicial : 
+
+index.js (CRA)
+main.jsx (VITE)
+
+
+JSX : 
+
+function Foo(){}
+
+
+foo()  === <Foo/>   
+
+foo()  === <Foo></Foo>
+
+
+
+- Bloques estructurales de la pagina
+- Bloques reutilizables
+- Patrones de diseño
