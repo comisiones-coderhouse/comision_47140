@@ -58,3 +58,22 @@ https://bulma.io/
 
 
 PROPS : Los parametros de un componente
+
+
+
+https://tomaspennisimoreiradev.netlify.app/
+
+
+
+
+
+
+
+
+
+REACT ENVIRONMENT
+
+1) Instalar NodeJS (NVM)
+2) Tener NPM actualizado (ya viene con NodeJS: npm i -g npm)
+3) Instalar create-react-app (se encuentra en NPM, es un paquete de NPM y se installa con : npm i -g create-react-app)
+4) Abro una linea de comandos en dondew quiero crear mi proyecto y ejecuto : create-react-app "nombre_del_proyecto" ("nombre_del_proyecto" es el nombre de la carpeta que se va a crear con todos los archivos dentro)
