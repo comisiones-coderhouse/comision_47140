@@ -61,15 +61,6 @@ PROPS : Los parametros de un componente
 
 
 
-https://tomaspennisimoreiradev.netlify.app/
-
-
-
-
-
-
-
-
 
 REACT ENVIRONMENT
 
@@ -77,3 +68,99 @@ REACT ENVIRONMENT
 2) Tener NPM actualizado (ya viene con NodeJS: npm i -g npm)
 3) Instalar create-react-app (se encuentra en NPM, es un paquete de NPM y se installa con : npm i -g create-react-app)
 4) Abro una linea de comandos en dondew quiero crear mi proyecto y ejecuto : create-react-app "nombre_del_proyecto" ("nombre_del_proyecto" es el nombre de la carpeta que se va a crear con todos los archivos dentro)
+
+
+
+
+
+PWA : Progressive Web App
+
+
+/* 
+const btn = document.querySelector('button');
+btn.addEventListener('click',miCallback)
+*/
+
+function Main(props) {
+
+    const handleClick = () => {
+        console.log('click')
+        //return undefined
+    }
+
+    //const resultado = handleClick()
+
+    return (
+        <main className="p-2 grow">
+            {props.children}
+            <button onClick={handleClick}>click</button>
+            {/* <button onClick={()=>{}}>click</button> */}
+           {/*  <button onClick={handleClick()}>click</button> */}
+        </main>
+    )
+}
+
+export default Main
+
+
+
+
+HOOK : Son funciones que comienzan con "use" y que le dan a un componente una nueva funcionalidad. Siempre se ejecutan, dentro del componente y nunca en un condicional/bucle
+
+- useState : es un hook que me permite crear una variable reactiva dentro de un componente funcional. El hook siempre retorna un array con dos cosas dentro : 
+
+
+- useEffect
+- useRef
+- useContext
+- useReducer
+- useMemo
+- useCallback
+- useLayoutEffect
+- useImperativeHandle
+- useDebugValue
+
+
+
+
+
+OLD MAIN : 
+
+import { useState } from "react"
+
+function Contador() {
+    //Valores
+
+    //Transformacion de variable normal en reactiva : Obtener un estado
+    //let contador = 0 //variable normal
+    let [contador,setContador] = useState(0) //variable de estado
+    let [open,setOpen] = useState(false) //variable de estado
+
+   /*  let resultadoDelHook = useState("Hola")
+    console.log(resultadoDelHook)
+    console.log(typeof resultadoDelHook)
+    console.log(Array.isArray(resultadoDelHook)) */
+
+    //Acciones
+    const handleClick = () => {
+        //contador = contador + 1
+        //contador += 1
+        //contador++
+
+        //setContador(contador++)
+        //setContador(contador = contador + 1)
+
+        setContador(contador + 1)
+        console.log(contador)
+    }
+
+    //Vista
+    return (
+        <main className="p-2 grow">
+            <p>Contador : {contador}</p>
+            <button onClick={handleClick}>click</button>
+        </main>
+    )
+}
+
+export default Contador

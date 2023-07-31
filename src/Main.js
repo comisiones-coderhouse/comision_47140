@@ -1,16 +1,34 @@
-function Main(props) {
+import { useState } from "react"
 
-    if(props.apellido){
-        console.log("llego el apellido")
-    }else {
-        console.log("no llego el apellido")
+
+function Main() {
+
+    //Estados
+    const [show, setShow] = useState(false)
+
+    //Accion
+    const toogleMenu = () => {
+        setShow(!show)
     }
 
-    return (
-        <main>
-            <h2>Home</h2>
-        </main>
-    )
+    if (show) {
+        return (
+            <main className="p-2 grow">
+                <button onClick={toogleMenu} className="border p-1 rounded">toogle menu</button>
+            </main>
+        )
+    } else {
+        return (
+            <main className="p-2 grow">
+                <button onClick={toogleMenu} className="border p-1 rounded">toogle menu</button>
+                <ul>
+                    <li>Home</li>
+                    <li>Productos</li>
+                    <li>Contacto</li>
+                </ul>
+            </main>
+        )
+    }
 }
 
 export default Main

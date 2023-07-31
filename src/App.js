@@ -3,11 +3,14 @@ import Header from './Header'
 import Main from './Main'
 
 function App() {
+
   return (
     <>
       <Header />
-      <Main/>
-      <Footer/>
+      <Main>
+        <h2>Home</h2>
+      </Main>
+      <Footer />
     </>
   );
 }
