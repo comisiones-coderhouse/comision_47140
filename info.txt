@@ -164,3 +164,100 @@ function Contador() {
 }
 
 export default Contador
+
+
+    //DRY - Don't Repeat Yourself
+    //Kiss - Keep It Simple Stupid
+    //YAGNI - You Aren't Gonna Need It
+    
+
+
+import { useState } from "react"
+
+
+
+function Main() {
+
+    //Estados
+    const [dark, setDark] = useState(false)
+    const [nombreReactivo, setNombreReactivo] = useState("Horacio")
+    let nombreNoReactivo = "Juan"
+
+
+    //Accion
+    const toggleDark = () => {
+        setShow(!show)
+    }
+
+    const cambiarValores = () => {
+        console.log("cambiar valores")
+
+        nombreNoReactivo = "pedro"
+
+        //nombreReactivo = "pedro" //NOOOOO!!! un estado no se puede reasignar
+
+        setNombreReactivo("pedro")
+
+        //console.log(nombreNoReactivo)
+        //console.log(nombreReactivo) //Este no va a dar porque el cambio de estado es asincronico
+    }
+
+    //Vista
+    //if(dark) { return <main className="p-2 grow dark"> } else { return <main className="p-2 grow light"> }
+    return (
+        <main className={dark ? "p-2 grow dark" : "p-2 grow light"}>
+            <p>{nombreNoReactivo}</p>
+            <p>{nombreReactivo}</p>
+            <button onClick={cambiarValores}>cambiar valores</button>
+            <button onClick={toggleDark}>toggle dark/light</button>
+        </main>
+    )
+
+    //Sentencia vs expresion
+    //expresiones ternarios : condicion ? valor si es true : valor si es false
+    //if(condicion) { return valor si es true } else { return valor si es false }
+    /* const resultado = if(true){
+        return 1
+    }else {
+        return 2
+    } */
+
+    //const resultado = true ? 1 : 2
+
+    /* return (
+        <main className="p-2 grow">
+            <p>{nombreNoReactivo}</p>
+            <p>{nombreReactivo}</p>
+            <button onClick={cambiarValores}>cambiar valores</button>
+            <button onClick={toggleDark}>toggle dark/light</button>
+        </main>
+    ) */
+
+
+    /* if (dark) {
+        return (
+            <main className="p-2 grow dark">
+                <p>{nombreNoReactivo}</p>
+                <p>{nombreReactivo}</p>
+                <button onClick={cambiarValores}>cambiar valores</button>
+                <button onClick={toggleDark}>toggle dark/light</button>
+            </main>
+        )
+    } else {
+        return (
+            <main className="p-2 grow light">
+                <p>{nombreNoReactivo}</p>
+                <p>{nombreReactivo}</p>
+                <button onClick={cambiarValores}>cambiar valores</button>
+                <button onClick={toggleDark}>toggle dark/light</button>
+            </main>
+        )
+    } */
+}
+
+export default Main
+
+
+PATRON DE DISEÑO CONTAINER/PRESENTACIONAL
+
+Container : Es un componente que se encarga de la logica fuerte (logica de negocio) , almacenamiento de informacion, etc. y de pasarle los datos al componente presentacional

@@ -1,34 +1,36 @@
 import { useState } from "react"
-
+import Form from "./components/Form"
+import Container from "./components/Container"
 
 function Main() {
 
     //Estados
-    const [show, setShow] = useState(false)
+    const [dark, setDark] = useState(false)//true
+    const [nombreReactivo, setNombreReactivo] = useState("Horacio")
+    let nombreNoReactivo = "Juan"
 
     //Accion
-    const toogleMenu = () => {
-        setShow(!show)
+    const toggleDark = () => {
+        setDark(!dark)
     }
 
-    if (show) {
-        return (
-            <main className="p-2 grow">
-                <button onClick={toogleMenu} className="border p-1 rounded">toogle menu</button>
-            </main>
-        )
-    } else {
-        return (
-            <main className="p-2 grow">
-                <button onClick={toogleMenu} className="border p-1 rounded">toogle menu</button>
-                <ul>
-                    <li>Home</li>
-                    <li>Productos</li>
-                    <li>Contacto</li>
-                </ul>
-            </main>
-        )
+    const cambiarValores = () => {
+        nombreNoReactivo = "pedro"
+        setNombreReactivo("pedro")
     }
+
+    //Vista
+    return (
+        <main className={dark ? "p-2 grow bg-slate-600 text-white" : "p-2 grow bg-white"}>
+            <p>{nombreNoReactivo}</p>
+            <p>{nombreReactivo}</p>
+            <button onClick={cambiarValores}>cambiar valores</button>
+            <button onClick={toggleDark}>toggle dark/light</button>
+            <hr />
+            <Form/>
+            <Container/>
+        </main>
+    )
 }
 
 export default Main
