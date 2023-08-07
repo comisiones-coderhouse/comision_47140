@@ -261,3 +261,54 @@ export default Main
 PATRON DE DISEÑO CONTAINER/PRESENTACIONAL
 
 Container : Es un componente que se encarga de la logica fuerte (logica de negocio) , almacenamiento de informacion, etc. y de pasarle los datos al componente presentacional
+
+Presentacional : Es un componente que se encarga de la vista, de mostrar la informacion que le llega del componente container
+
+
+
+
+const arr = [1,2,3]
+
+para recorrer y ya
+arr.forEach((item,i)=>{ return ? })
+
+para recorrer y modificar
+const resultado = arr.map((item,i)=>{ 
+    return 1
+   //return undefined 
+})
+
+para recorrer y filtrar
+const resultado = arr.filter((item,i)=>{})
+
+para recorrer y encontrar
+const resultado = arr.find((item,i)=>{})
+
+
+
+
+
+
+
+
+
+
+
+
+TODOS: 
+
+- PASAR funcion como prop
+
+
+
+
+
+const foo = function(a){ return a}
+
+const foo = (a) => { return a}
+
+const foo = (a) => a
+
+const foo = a => a
+
+const foo = a => (a)

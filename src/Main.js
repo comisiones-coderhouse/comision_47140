@@ -5,7 +5,7 @@ import Container from "./components/Container"
 function Main() {
 
     //Estados
-    const [dark, setDark] = useState(false)//true
+    const [dark, setDark] = useState(false)
     const [nombreReactivo, setNombreReactivo] = useState("Horacio")
     let nombreNoReactivo = "Juan"
 
