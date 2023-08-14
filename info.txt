@@ -453,3 +453,7 @@ import { useParams } from "react-router-dom"
 Link , NavLink : Son componentes de la libreria que dan una etiqueta <a>
 Routes : Es un componente que agrupa las rutas (Route) 
 Route : Es un componente que se encarga de renderizar un componente cuando la ruta coincide con la url actual del navegador
+
+
+
+
