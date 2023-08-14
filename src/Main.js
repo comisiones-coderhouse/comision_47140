@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Form from "./components/Form"
 import Container from "./components/Container"
+import ContadorMaria from "./components/ContadorMaria"
 
 function Main() {
 
@@ -22,12 +23,13 @@ function Main() {
     //Vista
     return (
         <main className={dark ? "p-2 grow bg-slate-600 text-white" : "p-2 grow bg-white"}>
-            <p>{nombreNoReactivo}</p>
+            {/* <p>{nombreNoReactivo}</p>
             <p>{nombreReactivo}</p>
             <button onClick={cambiarValores}>cambiar valores</button>
             <button onClick={toggleDark}>toggle dark/light</button>
             <hr />
-            <Form/>
+            <Form/> */}
+            <ContadorMaria/>
             <Container/>
         </main>
     )

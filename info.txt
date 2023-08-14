@@ -312,3 +312,118 @@ const foo = (a) => a
 const foo = a => a
 
 const foo = a => (a)
+
+
+
+
+        /*  setTimeout(() => {
+             
+             console.log("Termino el pedido a la api")
+             
+             let data = [{ id: 1, nombre: "Horacio" }, { id: 2, nombre: "Juan" }, { id: 3, nombre: "Pedro" }]
+ 
+             setData(data)
+ 
+         }, 3000)  */
+
+
+
+src/
+    ui/
+        layout/
+            Header.js
+            Footer.js
+            Main.js
+        pages/
+            Home.js
+            About.js
+            Contact.js
+        widgets/
+            Counter.js
+            Button.js
+            Nav.js
+    api/
+        context/
+        redux/
+        db.js
+
+    
+
+Props children
+render props
+HoC : High Order Component
+
+
+Context : Provider - Consumer
+
+
+
+
+
+HTTP y FETCH
+
+HTTP : Es un protocolo de comunicacion entre cliente y servidor. Es el protocolo que se usa para comunicarse con el servidor. Es el protocolo que se usa para hacer pedidos a la API
+
+
+REQUEST
+
+- METODO/VERBOS : GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD
+- URL/IP : http://google.com/search?q=react
+- VERSION : HTTP/1.1
+- HEADERS : 
+
+    - Accept : text/html, application/json, application/xml, application/pdf, image/png, image/jpeg, image/gif, etc.
+    - Content-Type : application/json, application/xml, application/pdf, image/png, image/jpeg, image/gif, etc.
+    - Authorization : Bearer token
+
+
+- BODY : Es informacion cruda que le podemos enviar al servidor (solo disponible en POST, PUT, DELETE, PATCH)
+
+
+
+
+
+
+RESPONSE
+
+- VERSION : HTTP/1.1
+- STATUS CODE : 1xx (Informacion), 2xx (OK), 3xx (Redireccion), 4xx (Error del cliente), 5xx (Error del servidor)
+- STATUS MESSAGE : OK, NOT FOUND, INTERNAL SERVER ERROR
+- HEADERS : 
+
+    - Content-Type : text/html, application/json, application/xml, application/pdf, image/png, image/jpeg, image/gif, etc.
+    - Authorization : Bearer token
+    
+- BODY : Es informacion cruda que nos envia el 
+
+
+
+
+//Promesa creada a mano
+/* const promesa_a_mano = new Promise((res, rej) => { })
+promesa_a_mano.then((respuesta) => { console.log(respuesta) })
+promesa_a_mano.catch(() => { })
+
+
+//Promesa con fetch
+const pedido = fetch('https://fakestoreapi.com/products')
+
+|pedido.then((respuesta) => {
+  const la_respuesta_parseada = respuesta.json()
+  return la_respuesta_parseada
+})
+
+  .then((respuesta_parseada) => {
+    console.log(respuesta_parseada)
+  })
+
+pedido.catch((error) => { console.log(error) })
+
+
+console.log(pedido)
+console.log(promesa_a_mano)
+
+
+
+ */
+
