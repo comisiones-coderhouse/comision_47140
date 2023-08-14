@@ -13,6 +13,35 @@ html , body , #root {
     flex-direction: column;
 }
 
+.nav__link::before {
+    content: "(";
+    position: relative;
+    left : 5px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.nav__link::after {
+    content: ")";
+    position: relative;
+    right : 5px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.nav__link.active::before {
+    left: -5px;
+    opacity: 1;
+}
+
+.nav__link.active::after {
+    right: -5px;
+    opacity: 1;
+}
+
+
+
+
 /* section {
     display: grid;
     grid-template-columns: 1fr;

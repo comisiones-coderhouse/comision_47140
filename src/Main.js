@@ -1,36 +1,24 @@
-import { useState } from "react"
-import Form from "./components/Form"
+import { Route, Routes /* , Router */ } from "react-router-dom"
 import Container from "./components/Container"
-import ContadorMaria from "./components/ContadorMaria"
+
 
 function Main() {
 
-    //Estados
-    const [dark, setDark] = useState(false)
-    const [nombreReactivo, setNombreReactivo] = useState("Horacio")
-    let nombreNoReactivo = "Juan"
+    const dark = false
 
-    //Accion
-    const toggleDark = () => {
-        setDark(!dark)
-    }
-
-    const cambiarValores = () => {
-        nombreNoReactivo = "pedro"
-        setNombreReactivo("pedro")
-    }
-
-    //Vista
     return (
         <main className={dark ? "p-2 grow bg-slate-600 text-white" : "p-2 grow bg-white"}>
-            {/* <p>{nombreNoReactivo}</p>
-            <p>{nombreReactivo}</p>
-            <button onClick={cambiarValores}>cambiar valores</button>
-            <button onClick={toggleDark}>toggle dark/light</button>
-            <hr />
-            <Form/> */}
-            <ContadorMaria/>
-            <Container/>
+            <Routes>
+                {/* if url del navegador es igual al path entonces mostra element */}
+
+                {/* / : se muestra un listado de todos los productos */}
+                <Route path="/" element={<Container/>}/>
+                {/* /cat/:id : se muesta un listado de solo los productos de esa categoria */}
+                <Route path="/cat/:id" element={<Container/>}/>
+
+                <Route path="/carrito" element={<p>Carrito</p>}/>
+                <Route path="*" element={<p>404</p>}/>
+            </Routes>
         </main>
     )
 }

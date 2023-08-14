@@ -1,10 +1,12 @@
-function NavLinks(parametros) {
+import { NavLink } from "react-router-dom"
+import CartWidget from "./components/CartWidget"
 
+function NavLinks() {
     return (
         <nav className="flex gap-4">
-            <a href="#">{parametros.nombre}</a>
-            <a href="#">link</a>
-            <a href="#">link</a>
+            <NavLink className="nav__link" to="/cat/1">categoria 1</NavLink>
+            <NavLink className="nav__link" to="/cat/2">categorias 2</NavLink>
+            <CartWidget/>
         </nav>
     )
 }

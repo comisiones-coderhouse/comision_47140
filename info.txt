@@ -427,3 +427,29 @@ console.log(promesa_a_mano)
 
  */
 
+
+
+
+//styled components
+// import styled from 'styled-components'
+/* 
+
+const Header = styled.header`
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
+
+*/
+
+
+
+import { useParams } from "react-router-dom"
+
+
+Link , NavLink : Son componentes de la libreria que dan una etiqueta <a>
+Routes : Es un componente que agrupa las rutas (Route) 
+Route : Es un componente que se encarga de renderizar un componente cuando la ruta coincide con la url actual del navegador
