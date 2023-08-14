@@ -15,7 +15,8 @@ function Container() {
     //Efectos : 4 
     useEffect(() => {
 
-        getAllProducts(setData)
+        //getAllProducts()
+        //.then(....)
 
         if (resultado.id) {
             console.log("Estoy en la ruta de categorias" + resultado.id)
