@@ -457,3 +457,67 @@ Route : Es un componente que se encarga de renderizar un componente cuando la ru
 
 
 
+State Uplifting : Es un patron de diseño que consiste pasarle informacion de un componente hijo a un componente padre. Se usa cuando un componente hijo necesita que un componente padre haga algo con su informacion. Para implementarlo se usan callbacks, eventos y props. 
+
+1) Crear un callback(una funcion) en el componente padre
+2) Se la paso al componente hijo (por props)
+3) Recibo ese callback en el hijo por props
+4) Ejecuto ese callback en un evento del hijo
+
+
+
+
+
+import CarritoHijo from "./CarritoHijo"
+
+
+/* 
+const btn = document.querySelector('button')
+btn.addEventListener('click', () => {})
+btn.addEventListener('click', miCallback)
+btn.addEventListener('click', miCallback())
+btn.addEventListener('click', ()=>miCallback())
+*/
+
+
+function Carrito() {
+
+
+    const handleClick = (e) => {
+        console.log(e)
+        e.preventDefault()
+        e.stopPropagation()
+        //e == Event Object == Representa el evento que se acaba de ejecutar
+        //e.target
+        //e.preventDefault
+        //e.stopPropagation
+        //const btn = document.querySelector('button')
+        //console.log(e.target)
+    }
+
+    const handleChange = (e) => { 
+        //console.log(e)
+        //e.preventDefault()
+        console.log(e.target)
+    }
+
+
+    const handlePropagation = (e) => {
+        console.log('handlePropagation')
+        console.log(e.target)
+    }
+
+    return (
+        <div onClick={handlePropagation}>
+            {/* <button onClick={() => { }}>click</button> */}
+            {/* <button onClick={handleClick()}>click</button> */}
+            {/* <button onClick={() => { handleClick() }}>click</button> */}
+            {/* <button onClick={handleClick}>click</button> */}
+            <a href="https://google.com" onClick={handleClick}>ir a google</a>
+            <input className="border-black border" type="text" onKeyDown={handleChange} />
+            <CarritoHijo />
+        </div>
+    )
+}
+
+export default Carrito

@@ -15,8 +15,10 @@ function Container() {
     //Efectos : 4 
     useEffect(() => {
 
-        //getAllProducts()
-        //.then(....)
+        getAllProducts()
+        .then(res=>{
+            setData(res)
+        })
 
         if (resultado.id) {
             console.log("Estoy en la ruta de categorias" + resultado.id)
@@ -28,16 +30,9 @@ function Container() {
     }, [resultado.id])
 
 
-
-    //Acciones : 2
     const getAllProducts = () => {
-        /* fetch('https://fakestoreapi.com/products')
-            .then(res => res.json())
-            .then(json => setData(json)) */
-
-        //Mock Async
         const pedido = new Promise((res, rej) => {
-            setTimetout(() => {
+            setTimeout(() => {
                 res(productosHardcordeados)
             }, 2000)
         })
@@ -45,7 +40,6 @@ function Container() {
         return pedido
     }
 
-    //Vista : 3
     return (
         <Presentacional data={data} />
     )
