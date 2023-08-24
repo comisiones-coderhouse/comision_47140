@@ -14,12 +14,10 @@ function Main() {
                 
                 <Route path="/" element={<Container greeting=""/>}/>
                 <Route path="/cat/:talle" element={<Container/>}/>
-                {/* <Route path="/cat/2" element={<Container/>}/> */}
-
-
                 <Route path="/item/:id" element={<ContainerDetalle/>}/>
                 <Route path="/carrito" element={<Carrito/>}/>
                 <Route path="*" element={<p>404</p>}/>
+                
             </Routes>
         </main>
     )

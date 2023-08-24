@@ -19,6 +19,3 @@ const MiCustomProvider = (props) => {
 }
 
 export default MiCustomProvider;
-
-
-
