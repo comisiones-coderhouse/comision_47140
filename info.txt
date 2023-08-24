@@ -521,3 +521,25 @@ function Carrito() {
 }
 
 export default Carrito
+
+
+
+
+Context API : Es una API de React que nos permite crear un contexto global para nuestra aplicacion. Es un patron de diseño que nos permite pasar informacion de un componente padre a un componente hijo sin tener que pasar por todos los componentes intermedios. Se usa cuando un componente hijo necesita informacion de un componente padre pero no es un componente directo. Para implementarlo se usan los componentes Provider que sale del contexto.
+
+
+IMPLEMENTACION PRACTICA : 
+
+1) Crear un componente
+2) Incluirlo en alguna parte de la aplicacion con children
+3) Crear un contexto 
+4) Sacarle el Provider de adentro
+5) Usar el Provider en el componente del paso 1
+6) Pasarle un valor al Provider con el prop value
+
+IMPLEMENTACION LECTURA DE CONTEXTO : 
+
+1) Importar el hook useContext
+2) Importar el contexto (paso 3 de la implementacion practica)
+3) ???
+4) Profit

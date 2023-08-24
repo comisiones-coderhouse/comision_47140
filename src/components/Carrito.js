@@ -7,11 +7,11 @@ function Carrito() {
 
     const onAdd = (cantidad) => {
         console.log("Mi Callback onAdd")
-        if(condicion){
+        /* if(condicion){
             setSelectedCant(cantidad)
         }else{
             setSelectedCant(cantidad + 1)
-        }
+        } */
     }
 
     return (

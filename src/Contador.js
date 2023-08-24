@@ -1,23 +1,17 @@
-import { useState } from "react"
+import { useState , useContext } from "react"
+import { contexto } from "./components/MiContexto"
 
 function Contador() {
-    //Valores
+
     let [contador,setContador] = useState(0)
+    const props = useContext(contexto)
+    console.log(props)
+    
 
-    //Acciones
-    const sumar = () => {
-        setContador(contador + 1)
-    }
+    const sumar = () => setContador(contador + 1)
+    const restar = () => setContador(contador - 1)
+    const resetear = () => setContador(0)
 
-    const restar = () => {
-        setContador(contador - 1)
-    }
-
-    const resetear = () => {
-        setContador(0)
-    }
-
-    //Vista
     return (
         <main className="p-2 grow">
             <p>Contador : {contador}</p>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function Presentacional(props) {
 
     return (
@@ -9,10 +11,12 @@ function Presentacional(props) {
                     <article key={i} className="card shadow-md p-4 rounded-md duration-300 transition hover:scale-110">
                         <h2 className="h-28 text-center">{item.title} - ${item.price}</h2>
                         <img src={item.image} alt={item.title} />
+                        <Link to={`/item/${item.id}`}>ver detalle</Link>
                     </article>
                 )
             })}
         </section>
     )
 }
+
 export default Presentacional
