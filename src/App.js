@@ -3,8 +3,7 @@ import Footer from './Footer'
 import Header from './Header'
 import Main from './Main'
 import MiCustomProvider from './components/MiContexto';
-import { createContext } from 'react';
-
+import { createContext, useState } from 'react';
 
 
 export const contextoNuevo = createContext()

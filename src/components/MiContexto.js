@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
-export const contexto = createContext() // creo el contexto
-const Provider = contexto.Provider // le saco el provider
+export const contexto = createContext() 
+const Provider = contexto.Provider 
 
 const MiCustomProvider = (props) => {
 

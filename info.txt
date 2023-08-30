@@ -543,3 +543,48 @@ IMPLEMENTACION LECTURA DE CONTEXTO :
 2) Importar el contexto (paso 3 de la implementacion practica)
 3) ???
 4) Profit
+
+
+
+Firebase : Es la plataforma
+Firestore : Es la base de datos
+
+primera parte : en la pagina web
+    - crear una cuenta
+    - crear un proyecto dentro de la cuenta
+    - crear una base de datos dentro del proyecto
+    - llenar la base de datos con datos
+    - obtener permisos de acceso para el codigo
+
+segunda parte : en el codigo
+    - establecer una conexion con la base de datos usando los permisos del ultimo punto de la primera parte
+    - ???
+    - profit
+
+
+
+CRUD : Create, Read, Update, Delete
+
+
+BASE DE DATOS : 
+ es un programa de tipo servidor
+
++ lenguajes : 
+MySQL
+MongoDB
+
+
+Categorias de dbs : 
+
+- relacionales - SQL (SQL, MySQL, Postgres, Oracle,MariaDB , etc.)
+    - db
+    - tablas ( como carpetas con validaciones )
+    - registros ( como filas en un excel )
+
+- no relacionales - NoSQL (NotOnly , MongoDB, Firebase, Cassandra, etc. MariaDB)
+    - db
+    - collection ( como carpetas sin validaciones )
+    - documentos ( como archivos json )
+
+- grafos 
+- vectoriales
