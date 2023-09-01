@@ -1,19 +1,26 @@
 import { useParams } from "react-router-dom"
 import { productosHardcordeados } from "../utils"
 import Contador from "../Contador"
+import { useEffect, useState } from "react"
 
 const ContainerDetalle = () => {
 
 
-    //hay un estado para guardar lo de la api
-
+    const [producto, setProducto] = useState({})
+    const [loading, setLoading] = useState(true)
     const params = useParams()
 
-    //console.log({ id: params.id })
-    //console.table(productosHardcordeados)
+    useEffect(()=>{
+        // fetch(`https://fakestoreapi.com/products/${params.id}`)
+        //.then(res=>res.json())
+        //.then(data=>{ if(data){ throw new Error("") } })
+        //.catch(err=>console.log(err))
+        setTimeout(()=>{
+            setLoading(false)
+        },2000)
+    },[])
 
-    //hay un efecto para pedir el detalle
-
+    if(loading) return <p>Cargando...</p>
 
     return (
         <div>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Presentacional from "./Presentacional"
 import { useParams } from "react-router-dom"
 import { productosConTalle, productosHardcordeados } from "../utils"
-import { db } from "../firebase"
+import { db } from "../db/firebase"
 import { getDocs , collection } from "firebase/firestore"
 //getDocs,getDoc,addDoc / collection, query, where, doc  
 
@@ -10,9 +10,9 @@ import { getDocs , collection } from "firebase/firestore"
 function Container() {
 
     const [data, setData] = useState([])
-    const [error, setError] = useState("") // "" / "No hay productos con ese talle" 
-    const resultado = useParams() // {} // {talle: ""} 
-    const talle = resultado.talle // "M" / "L"
+    const [error, setError] = useState("") 
+    const resultado = useParams() 
+    const talle = resultado.talle 
 
     useEffect(() => {
 

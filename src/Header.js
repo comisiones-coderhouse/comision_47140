@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, Route, Routes } from "react-router-dom"
 import NavLinks from "./NavLinks"
 
 function Header() {
@@ -7,6 +7,15 @@ function Header() {
             <Link to="/">
                 <h1>Mi Pagina</h1>
             </Link>
+
+            <Routes>
+                <Route path="/" element={(
+                    <div>
+                        <input type="text" />
+                    </div>
+                )} />
+            </Routes>
+
             <NavLinks
                 nombre="horacio"
                 edad={33}

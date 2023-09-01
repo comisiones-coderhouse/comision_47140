@@ -5,7 +5,6 @@ import Main from './Main'
 import MiCustomProvider from './components/MiContexto';
 import { createContext, useState } from 'react';
 
-
 export const contextoNuevo = createContext()
 const Provider = contextoNuevo.Provider
 
