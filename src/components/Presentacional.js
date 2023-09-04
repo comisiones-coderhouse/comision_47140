@@ -9,8 +9,8 @@ function Presentacional(props) {
             : props.data.map((item,i)=>{
                 return (
                     <article key={i} className="card shadow-md p-4 rounded-md duration-300 transition hover:scale-110">
-                        <h2 className="h-28 text-center">{item.title} - ${item.price}</h2>
-                        <img src={item.image} alt={item.title} />
+                        <h2 className="overflow-hidden text-ellipsis truncate mb-4">${item.price} - {item.title}</h2>
+                        <img src={item.image} alt={item.title} className="h-[200px] w-full object-contain" />
                         <Link to={`/item/${item.id}`}>ver detalle</Link>
                     </article>
                 )
