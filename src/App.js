@@ -3,15 +3,13 @@ import Footer from './Footer'
 import Header from './Header'
 import Main from './Main'
 import MiCustomProvider from './components/MiContexto';
-import { createContext, useState } from 'react';
-import { Toaster, toast } from 'sonner';
+import { createContext } from 'react';
+import { Toaster } from 'sonner';
 
 export const contextoNuevo = createContext()
 const Provider = contextoNuevo.Provider
 
 function App() {
-
-  const [estado, setEstado] = useState({})
 
   const valorDelContexto = {
     carrito: [],
@@ -34,6 +32,7 @@ function App() {
         </Provider>
       </MiCustomProvider>
     </BrowserRouter>
+
   );
 }
 

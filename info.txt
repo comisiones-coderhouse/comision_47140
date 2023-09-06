@@ -592,3 +592,45 @@ Categorias de dbs :
 
 
 REST SPREAD
+
+
+
+
+
+
+ENTREGA FINAL : 
+
+- Consta de tres piezas : 
+    - codigo
+    - documentacion
+    - video/gif
+
+- Componentes a tener (como minimo) : 
+    - App
+    - Navbar
+    - CartWidget
+    - ItemListContainer
+    - ItemList
+    - Item
+    - ItemDetailContainer
+    - ItemDetail
+    - Cart
+    - ItemCount
+    - CartContext
+
+- Rutas a tener : 
+    - / (ItemListContainer)
+    - /category/:id (ItemListContainer)
+    - /item/:id (ItemDetailContainer)
+    - /cart (Cart)
+
+- Componentes que no deberian haber : 
+    - Componentes vacios 
+    - Componentes que no se usan
+    - Componentes inutiles : solo tienen un div, apuntan a otro componente
+
+- NO TENER NUNCA : 
+
+    - Comentarios
+    - Console.logs (Horacio solo admite console.errors en .catchs*)
+    - fragmentos inutiles
